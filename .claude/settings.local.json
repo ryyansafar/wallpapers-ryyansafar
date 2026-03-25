@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__stitch__get_screen",
+      "Bash(curl -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzBkNjE0ZTMyMjU4ZDRlZDRiZTVlMTllMzMxYWI4M2U4EgsSBxDD_tzBpxQYAZIBIwoKcHJvamVjdF9pZBIVQhM3MTE1OTMzOTE3MDk2MDUxMjA3&filename=&opi=89354086\" -o /tmp/stitch_screen.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -L \"https://lh3.googleusercontent.com/aida/ADBb0ugRDn27wamsklkZgZ2rs5PR4AGT2t7_6WdlYbp94OTQukUOo89ZOpoj_G97rOEniVgx4VRn8Zg_wC5w07KsBiDSJgm6dp3TlFsu5lHK25ZYnvImdZxMsB8bIvznsjxwxLaUAv0JODz61iDk6e_OHMxpSwpLi4B-MqKLtqYRoFqZ8tj8PKNfdDh7HXj4U4fTvlbC_HZ7-XnOPtZsQR34bN7DaA2rDQae-D1rwnmIijQejXqtXeaVyF71crU\" -o /tmp/stitch_screenshot.png)",
+      "Bash(cp /tmp/stitch_screen.html /Users/rybosafar/wallpapers-ryyansafar/index.html)",
+      "Bash(cp /tmp/stitch_screenshot.png /Users/rybosafar/wallpapers-ryyansafar/screenshot.png)",
+      "Bash(npm --version)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir -p public)",
+      "Bash(mv index.html public/)",
+      "Bash(mv screenshot.png public/)",
+      "Bash(npx:*)"
+    ]
+  }
+}
