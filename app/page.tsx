@@ -71,6 +71,11 @@ export default function Home() {
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
               <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="locked" src="/w-locked.svg" />
               <div className="absolute inset-0 holographic-effect opacity-20 pointer-events-none" />
+              <div className="absolute top-6 right-6 font-stamp text-xs text-primary-fixed/40 text-right leading-none">
+                RES: 1242 X 2688<br />
+                TYPE: SECURE_LOCK<br />
+                AUTH: [ENCRYPTED]
+              </div>
               <div className="absolute bottom-6 left-6 flex flex-col gap-4">
                 <button className="bg-primary-fixed text-surface px-6 py-3 font-headline font-black text-sm uppercase tracking-tighter rotate-2 hover:-rotate-2 transition-transform sticker-shadow flex items-center gap-2">
                   <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span>
@@ -94,8 +99,8 @@ export default function Home() {
               <div className="absolute inset-0 holographic-effect opacity-30 pointer-events-none" />
               <div className="absolute top-6 right-6 font-stamp text-xs text-primary-fixed/40 text-right leading-none">
                 RES: 1242 X 2688<br />
-                TYPE: OBSIDIAN_GLASS<br />
-                AUTH: SAFAR_VANDAL
+                TYPE: OPEN_ACCESS<br />
+                AUTH: R_SAFAR
               </div>
               <div className="absolute bottom-6 left-6 flex flex-col gap-4">
                 <button className="bg-primary-fixed text-surface px-6 py-3 font-headline font-black text-sm uppercase tracking-tighter rotate-1 hover:-rotate-3 transition-transform sticker-shadow flex items-center gap-2">
@@ -114,6 +119,11 @@ export default function Home() {
           <div className="relative z-10 group h-[768px] w-[400px] flex-shrink-0 -mt-16">
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
               <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="yo" src="/w-yo.svg" />
+              <div className="absolute top-6 right-6 font-stamp text-xs text-primary-fixed/40 text-right leading-none">
+                RES: 1242 X 2688<br />
+                TYPE: VIBE_CHECK<br />
+                AUTH: VANDAL
+              </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <span className="material-symbols-outlined text-[10rem] text-primary-fixed rotate-12">mood</span>
               </div>
@@ -173,7 +183,9 @@ export default function Home() {
                 </p>
               </div>
               <p className="font-body text-on-surface-variant text-lg leading-relaxed opacity-60">
-                Our flagship obsidian-gradient vector slab. Optimized for extreme resolution displays and minimal cognitive load.
+                RES: 8K NATIVE<br />
+                TYPE: MASTER_STASH<br />
+                AUTH: VECTOR_CORE
               </p>
             </div>
           </div>
@@ -212,7 +224,9 @@ export default function Home() {
             </div>
             <div className="w-64 pt-12">
               <p className="font-body text-on-surface-variant text-lg leading-relaxed mb-8">
-                Designed for the 8K workspace. Our desktop slabs use ultra-high bit depth obsidian grains to eliminate banding in dark environments.
+                RES: 8K ULTRA-WIDE<br />
+                TYPE: OBSIDIAN_VOID<br />
+                AUTH: SCREENSAVER
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-primary-fixed font-stamp">
