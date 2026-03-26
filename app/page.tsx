@@ -269,9 +269,9 @@ export default function Home() {
               RYYAN SAFAR © 2024
             </div>
             <div className="mt-24 flex gap-12">
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="#">INDEX</a>
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="#">STASH</a>
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="#">SPLATTER</a>
+              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site">INDEX</a>
+              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site">STASH</a>
+              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site/design">SPLATTER</a>
             </div>
           </div>
         </section>
@@ -287,15 +287,15 @@ export default function Home() {
       {/* BOTTOM NAV BAR */}
       <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-between items-end px-6 pb-4 md:hidden">
         <div className="bg-[#131313] w-full flex justify-between items-center p-2 rounded-none">
-          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="#">
+          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="https://ryyansafar.site">
             <span className="material-symbols-outlined text-2xl">grid_view</span>
             <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">INDEX</span>
           </a>
-          <a className="flex flex-col items-center justify-center bg-[#CCFF00] text-[#131313] -rotate-2 scale-105 p-3" href="#">
+          <a className="flex flex-col items-center justify-center bg-[#CCFF00] text-[#131313] -rotate-2 scale-105 p-3" href="https://ryyansafar.site">
             <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
             <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">STASH</span>
           </a>
-          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="#">
+          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="https://ryyansafar.site/design">
             <span className="material-symbols-outlined text-2xl">architecture</span>
             <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">SPLATTER</span>
           </a>
