@@ -9,7 +9,6 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="min-w-screen h-full flex-shrink-0 snap-start relative flex items-center justify-center p-12 overflow-hidden border-r-0">
           <div className="absolute inset-0 z-0">
-            {/* HEROWALLPAPER REMOVED AS REQUESTED */}
             <div className="absolute top-10 left-10 text-primary-fixed opacity-20 transform -rotate-12 scale-150">
               <span className="material-symbols-outlined text-9xl">texture</span>
             </div>
@@ -43,13 +42,14 @@ export default function Home() {
         </section>
 
         {/* GALLERY TRACK - MOBILE SLABS */}
-        <section className="min-w-fit h-full flex-shrink-0 snap-start flex items-center gap-24 px-24 bg-surface-container-low relative">
-          <div className="absolute top-0 left-0 text-primary-fixed opacity-5 pointer-events-none scale-150">
-            <span className="material-symbols-outlined text-[40rem]">water_drop</span>
+        <section className="min-w-fit h-full flex-shrink-0 snap-start flex items-center gap-24 px-24 bg-surface-container-low relative overflow-hidden">
+          {/* MASSIVE WATER DROPLET BACKGROUND ICONOGRAPHY */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-fixed opacity-[0.08] pointer-events-none z-0 transform scale-[1.5]">
+             <span className="material-symbols-outlined text-[120vh]">water_drop</span>
           </div>
 
           {/* MOBILE WALLPAPER 1 */}
-          <div className="relative group h-[768px] w-[400px] flex-shrink-0">
+          <div className="relative z-10 group h-[768px] w-[400px] flex-shrink-0">
             <div className="absolute -top-10 -left-6 z-20 bg-primary-fixed text-surface px-4 py-1 font-stamp text-xl rotate-[-4deg] sticker-shadow">
               #ACID_01
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
 
           {/* MOBILE WALLPAPER 2 */}
-          <div className="relative group h-[768px] w-[400px] flex-shrink-0 mt-32">
+          <div className="relative z-10 group h-[768px] w-[400px] flex-shrink-0 mt-32">
             <div className="absolute -bottom-8 -right-4 z-20 bg-surface-tint text-surface px-4 py-1 font-stamp text-xl rotate-[3deg] sticker-shadow">
               #VOID_99
             </div>
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
 
           {/* MOBILE WALLPAPER 3 */}
-          <div className="relative group h-[768px] w-[400px] flex-shrink-0 -mt-16">
+          <div className="relative z-10 group h-[768px] w-[400px] flex-shrink-0 -mt-16">
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -132,14 +132,19 @@ export default function Home() {
         </section>
 
         {/* MAIN WALLPAPER SECTION (DESKTOP) */}
-        <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface-container-lowest relative">
-          <div className="mb-12">
+        <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface-container-lowest relative overflow-hidden">
+          {/* ANOTHER MASSIVE DROPLET BACKGROUND LAYER */}
+          <div className="absolute bottom-0 right-0 text-primary-fixed opacity-5 pointer-events-none transform translate-x-1/4 translate-y-1/4">
+             <span className="material-symbols-outlined text-[80rem]">water_drop</span>
+          </div>
+
+          <div className="relative z-10 mb-12">
             <h2 className="font-headline font-black text-8xl text-primary-fixed uppercase tracking-tighter leading-none">
               THE<br />
               <span className="text-on-surface">MAIN STASH</span>
             </h2>
           </div>
-          <div className="flex gap-16 items-start">
+          <div className="relative z-10 flex gap-16 items-start">
             <div className="relative group w-[1000px] h-[500px] flex-shrink-0">
                <div className="absolute -top-12 -right-8 z-20 bg-primary-fixed text-surface px-8 py-3 font-stamp text-3xl rotate-[4deg] sticker-shadow">
                 #COLLECTION_00
@@ -229,7 +234,6 @@ export default function Home() {
 
         {/* FOOTER / OUTRO */}
         <section className="min-w-screen h-full flex-shrink-0 snap-start bg-surface-container-highest flex items-center justify-center relative overflow-hidden">
-          {/* Logo-bg.svg background layer */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Logo-bg.svg" alt="" className="w-[70vh] h-[70vh] object-contain" />
