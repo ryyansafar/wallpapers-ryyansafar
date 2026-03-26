@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Wallpapers — Ryyan Safar",
   description: "COLLECTION_003 UNHINGED_GALLERY",
   icons: {
-    icon: "/logo-header-fr.svg",
+    icon: "/Logo-bg.svg",
   },
 };
 
