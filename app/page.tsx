@@ -253,7 +253,7 @@ export default function Home() {
               STAY<br />UNHINGED
             </div>
             <div className="font-headline font-bold text-2xl tracking-[1em] text-on-surface opacity-40 uppercase">
-              RYYAN SAFAR © 2024
+              RYYAN SAFAR © 2026
             </div>
             <div className="mt-24 flex gap-12">
               <a onClick={handleHomeClick} className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all cursor-pointer" href="#">HOME</a>
