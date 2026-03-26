@@ -8,6 +8,9 @@ export default function HorizontalScroller({ children }: { children: React.React
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Only activate on desktop (≥768px = Tailwind md breakpoint)
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return;
+
     const el = scrollRef.current;
     if (!el) return;
 

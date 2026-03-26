@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# firebase admin sdk — NEVER commit private keys
+*firebase-adminsdk*.json
+
+# claude code local settings
+.claude/
