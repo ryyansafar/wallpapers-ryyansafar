@@ -211,10 +211,20 @@ export default function Home() {
               <div className="font-headline font-bold text-lg lg:text-2xl tracking-[0.5em] lg:tracking-[1em] text-on-surface opacity-40 uppercase">
                 RYYAN SAFAR © 2026
               </div>
-              <div className="mt-16 lg:mt-24 flex gap-8 lg:gap-12">
-                <a onClick={handleHomeClick} href="#" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all cursor-pointer">HOME</a>
-                <a href="https://ryyansafar.site" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all">PORTFOLIO</a>
-                <a href="https://ryyansafar.site/design" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all">DESIGN</a>
+              <div className="mt-16 lg:mt-24 flex flex-col items-center gap-6">
+                <div className="flex gap-8 lg:gap-12">
+                  <a onClick={handleHomeClick} href="#" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all cursor-pointer">HOME</a>
+                  <a href="https://ryyansafar.site" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all">PORTFOLIO</a>
+                  <a href="https://ryyansafar.site/design" className="text-primary-fixed font-headline font-black text-2xl lg:text-4xl hover:line-through transition-all">DESIGN</a>
+                </div>
+                <a
+                  href="https://razorpay.me/@ryyansafar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-fixed font-street text-3xl lg:text-5xl hover:scale-105 transition-all rotate-3 mt-4"
+                >
+                  BUY ME A CHAI
+                </a>
               </div>
             </div>
           </section>
@@ -352,6 +362,18 @@ export default function Home() {
             <div className="font-street text-4xl sm:text-5xl text-primary-fixed leading-none pl-8">WALLPAPERS</div>
             <div className="font-street text-4xl sm:text-5xl text-on-surface leading-none pl-4">TODAY</div>
           </div>
+
+          <div className="mt-8 flex flex-col gap-4">
+            <a
+              href="https://razorpay.me/@ryyansafar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-fixed font-street text-3xl hover:scale-105 transition-all rotate-2 w-fit italic"
+            >
+              BUY ME A CHAI
+            </a>
+          </div>
+
           <div className="mt-10 sm:mt-12 flex justify-between items-end">
             <div className="font-stamp text-[10px] tracking-[0.3em] text-on-surface/40 uppercase leading-relaxed">
               DESIGNED IN THE VOID<br />BY RYYAN SAFAR © 2026
