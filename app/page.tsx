@@ -9,6 +9,11 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="min-w-screen h-full flex-shrink-0 snap-start relative flex items-center justify-center p-12 overflow-hidden border-r-0">
           <div className="absolute inset-0 z-0">
+            {/* SUBTLE HACKER FLORA BACKGROUND */}
+            <div className="absolute top-1/4 left-1/3 opacity-5 rotate-12 scale-75 pointer-events-none">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/hacker-flora.png" alt="" className="w-64" />
+            </div>
             <div className="absolute top-10 left-10 text-primary-fixed opacity-20 transform -rotate-12 scale-150">
               <span className="material-symbols-outlined text-9xl">texture</span>
             </div>
@@ -46,6 +51,12 @@ export default function Home() {
           {/* MASSIVE WATER DROPLET BACKGROUND ICONOGRAPHY */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-fixed opacity-[0.08] pointer-events-none z-0 transform scale-[1.5]">
              <span className="material-symbols-outlined text-[120vh]">water_drop</span>
+          </div>
+
+          {/* ADDITIONAL SCATTERED HACKER FLORA */}
+          <div className="absolute top-10 right-1/4 opacity-10 -rotate-6 scale-50 pointer-events-none z-0">
+             {/* eslint-disable-next-line @next/next/no-img-element */}
+             <img src="/hacker-flora.png" alt="" className="w-96" />
           </div>
 
           {/* MOBILE WALLPAPER 1 */}
@@ -138,6 +149,12 @@ export default function Home() {
              <span className="material-symbols-outlined text-[80rem]">water_drop</span>
           </div>
 
+          {/* SCATTERED FLORA IN MAIN STASH */}
+          <div className="absolute bottom-20 left-1/3 opacity-5 rotate-45 scale-75 pointer-events-none">
+             {/* eslint-disable-next-line @next/next/no-img-element */}
+             <img src="/hacker-flora.png" alt="" className="w-80" />
+          </div>
+
           <div className="relative z-10 mb-12">
             <h2 className="font-headline font-black text-8xl text-primary-fixed uppercase tracking-tighter leading-none">
               THE<br />
@@ -183,14 +200,20 @@ export default function Home() {
         </section>
 
         {/* DESKTOP SECTION - SCREENSAVER */}
-        <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface relative">
-          <div className="mb-12">
+        <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface relative overflow-hidden">
+          {/* SCATTERED FLORA IN SCREENSAVER SECTION */}
+          <div className="absolute top-1/4 left-10 opacity-10 rotate-[-15deg] scale-50 pointer-events-none">
+             {/* eslint-disable-next-line @next/next/no-img-element */}
+             <img src="/hacker-flora.png" alt="" className="w-72" />
+          </div>
+
+          <div className="relative z-10 mb-12">
             <h2 className="font-headline font-black text-8xl text-on-surface-variant uppercase tracking-tighter leading-none italic">
               DESKTOP<br />
               <span className="text-primary-fixed">ULTRA-WIDE</span>
             </h2>
           </div>
-          <div className="flex gap-16 items-start">
+          <div className="relative z-10 flex gap-16 items-start">
             <div className="relative group w-[1000px] h-[500px] flex-shrink-0">
               <div className="absolute -top-6 -right-6 z-20 h-24 w-24 bg-primary-fixed text-surface flex items-center justify-center rounded-full rotate-12 font-street text-4xl sticker-shadow">
                 !!!
