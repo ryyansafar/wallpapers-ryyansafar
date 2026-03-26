@@ -229,9 +229,8 @@ export default function Home() {
         {/* Fixed header */}
         <header className="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_0_40px_rgba(204,255,0,0.06)] flex justify-between items-center px-5 py-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-header-fr.svg" alt="RS" className="h-9 w-auto" />
+          <img src="/Logo-bg.svg" alt="RS" className="h-9 w-auto" />
           <div className="font-street text-xl text-primary-fixed -rotate-2">RYYAN SAFAR</div>
-          <span className="material-symbols-outlined text-primary-fixed">token</span>
         </header>
 
         <main className="pt-24 pb-36 px-4 space-y-20 overflow-x-clip">
@@ -244,7 +243,7 @@ export default function Home() {
             <div className="relative z-10 flex flex-col space-y-1 w-full">
               <h2 className="font-street text-5xl text-primary-fixed leading-[0.9] -rotate-2">WALL</h2>
               <h2 className="font-headline font-black text-7xl text-on-surface leading-[0.85] tracking-tighter translate-x-3 glitch-text">PAPERS</h2>
-              <h2 className="font-street text-4xl text-primary-fixed leading-[0.9] rotate-3 -translate-x-2">YEAH</h2>
+              <h2 className="font-street text-4xl text-primary-fixed leading-[0.9] rotate-3 translate-x-1">YEAH</h2>
               <div className="flex flex-wrap items-baseline gap-2">
                 <h2 className="font-headline font-black text-6xl text-on-surface leading-none uppercase">by</h2>
                 <h2 className="font-street text-5xl text-primary-fixed leading-none -rotate-6">RYYAN</h2>
@@ -355,19 +354,14 @@ export default function Home() {
           </div>
         </footer>
 
-        {/* Fixed bottom nav */}
-        <nav className="fixed bottom-6 w-full flex justify-center z-50 px-4 pointer-events-none">
-          <div className="flex gap-3 pointer-events-auto">
-            <div className="bg-primary-fixed text-surface p-3 rotate-3 scale-110 shadow-[0_0_20px_rgba(195,244,0,0.3)]">
-              <span className="material-symbols-outlined">grid_view</span>
-            </div>
-            <a href="https://ryyansafar.site" className="bg-surface-container-high text-primary-fixed p-3 -rotate-2 opacity-80 hover:opacity-100 hover:scale-110 transition-all">
-              <span className="material-symbols-outlined">person</span>
-            </a>
-            <a href="https://ryyansafar.site/design" className="bg-surface-container-high text-primary-fixed p-3 rotate-1 opacity-80 hover:opacity-100 hover:scale-110 transition-all">
-              <span className="material-symbols-outlined">brush</span>
-            </a>
-          </div>
+        {/* Fixed bottom pill — scroll to top */}
+        <nav className="fixed bottom-6 w-full flex justify-center z-50 pointer-events-none">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="pointer-events-auto bg-primary-fixed text-surface px-8 py-3 font-street text-xl -rotate-1 shadow-[0_0_24px_rgba(195,244,0,0.25)] hover:rotate-0 hover:scale-105 active:scale-95 transition-all"
+          >
+            STAY UNHINGED ↑
+          </button>
         </nav>
 
       </div>
