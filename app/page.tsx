@@ -224,103 +224,158 @@ export default function Home() {
       </div>
 
       {/* ─── MOBILE: vertical scroll ─── */}
-      <div className="md:hidden bg-surface min-h-screen">
+      <div className="md:hidden bg-surface min-h-screen overflow-x-hidden">
 
-        {/* Sticky header */}
-        <div className="sticky top-0 z-50 flex justify-between items-center px-5 py-4 bg-surface/90 backdrop-blur-sm">
-          <div className="bg-primary-fixed px-4 py-1 -rotate-1 sticker-shadow">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-header-fr.svg" alt="RS_GALLERY" className="h-6 w-auto" />
+        {/* Fixed header */}
+        <header className="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_0_40px_rgba(204,255,0,0.06)] flex justify-between items-center px-6 py-4">
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary-fixed">menu</span>
+            <span className="font-headline font-black tracking-tighter uppercase text-primary-fixed text-sm">GALLERY_03</span>
           </div>
-          <div className="font-stamp text-xs text-primary-fixed/60 uppercase tracking-widest">COLLECTION_003</div>
-        </div>
+          <div className="font-street text-2xl text-primary-fixed -rotate-2">RYYAN SAFAR</div>
+          <span className="material-symbols-outlined text-primary-fixed">token</span>
+        </header>
 
-        {/* Hero */}
-        <section className="px-5 pt-12 pb-16">
-          <div className="font-headline font-black text-[18vw] leading-none tracking-tighter uppercase glitch-text break-all">
-            WALL<br />
-            <span className="text-primary-fixed">PAPER</span><br />
-            S.
-          </div>
-          <div className="mt-6 bg-primary-fixed text-surface px-4 py-2 -rotate-1 font-headline font-extrabold text-sm uppercase tracking-widest inline-block">
-            VARIANT C: ACID GREEN & OBSIDIAN
-          </div>
-          <div className="mt-8 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-surface rotate-12 sticker-shadow">
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>mood</span>
+        <main className="pt-24 pb-36 px-4 space-y-20">
+
+          {/* Hero — mixed Barrio + Space Grotesk narrative */}
+          <section className="relative min-h-[480px] flex flex-col justify-center items-start overflow-hidden">
+            <div className="absolute -left-10 top-10 opacity-10 select-none pointer-events-none">
+              <span className="font-street text-[8rem] leading-none text-primary-fixed block rotate-12">WALLS</span>
             </div>
-            <div className="font-stamp text-sm text-primary-fixed/60 border-l border-outline-variant pl-4">
-              RYYAN SAFAR<br />UNHINGED_GALLERY
+            <div className="relative z-10 flex flex-col space-y-1 w-full">
+              <h2 className="font-street text-5xl text-primary-fixed leading-[0.9] -rotate-2">WALL</h2>
+              <h2 className="font-headline font-black text-7xl text-on-surface leading-[0.85] tracking-tighter translate-x-4 glitch-text">PAPERS</h2>
+              <h2 className="font-street text-4xl text-primary-fixed leading-[0.9] rotate-3 -translate-x-2">YEAH</h2>
+              <div className="flex flex-wrap items-baseline gap-2">
+                <h2 className="font-headline font-black text-6xl text-on-surface leading-none uppercase">by</h2>
+                <h2 className="font-street text-5xl text-primary-fixed leading-none -rotate-6">RYYAN</h2>
+              </div>
+              <h2 className="font-headline font-black text-6xl text-on-surface leading-none underline decoration-primary-fixed decoration-[6px] underline-offset-4 break-words">SAFAR.</h2>
             </div>
-          </div>
-        </section>
-
-        {/* Wallpaper cards */}
-        <section className="px-5 flex flex-col gap-20 pb-24">
-
-          <div className="relative">
-            <div className="absolute -top-4 -left-1 z-10 bg-primary-fixed text-surface px-3 py-0.5 font-stamp text-base rotate-[-3deg] sticker-shadow">#ACID_01</div>
-            <div className="w-full overflow-hidden sticker-shadow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full aspect-[9/16] object-cover" alt="Ryyan has locked his phone" src="/w-locked.png" />
+            <div className="mt-8 self-end pr-4 flex flex-col items-center opacity-80">
+              <div className="font-street text-xl text-primary-fixed">RYYAN SAFAR</div>
+              <svg className="mt-[-10px]" width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#c3f400" strokeWidth="4" strokeLinecap="round">
+                <circle cx="50" cy="50" r="40" />
+                <path d="M35 40 Q35 45 35 45" />
+                <path d="M65 40 Q65 45 65 45" />
+                <path d="M30 65 Q50 80 70 65" />
+              </svg>
             </div>
-            <WallpaperActions wallpaperId="w-locked" src="/w-locked.png" filename="wallpaper-locked-ryyan.png" mobile />
-          </div>
+          </section>
 
-          <div className="relative">
-            <div className="absolute -top-4 -right-1 z-10 bg-surface-tint text-surface px-3 py-0.5 font-stamp text-base rotate-[3deg] sticker-shadow">#VOID_99</div>
-            <div className="w-full overflow-hidden sticker-shadow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full aspect-[9/16] object-cover" alt="Ryyan has unlocked his phone" src="/w-unlocked.png" />
+          {/* Gallery slabs */}
+          <section className="space-y-20">
+
+            {/* Card 1 — locked */}
+            <div className="relative group">
+              <div className="absolute -top-6 -right-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 rotate-3 border border-outline-variant/20">#ACID_01</div>
+              <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full aspect-[4/5] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="Ryyan has locked his phone" src="/w-locked.png" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute bottom-5 left-5 font-stamp text-[10px] tracking-tighter text-white/50 space-y-0.5 pointer-events-none">
+                  <div>RES: 1242×2688</div>
+                  <div>TYPE: SECURE_LOCK</div>
+                </div>
+                <div className="absolute bottom-5 right-5">
+                  <WallpaperActions wallpaperId="w-locked" src="/w-locked.png" filename="wallpaper-locked-ryyan.png" overlay likeRotate="-rotate-2" downloadRotate="rotate-1 hover:rotate-0" />
+                </div>
+              </div>
             </div>
-            <WallpaperActions wallpaperId="w-unlocked" src="/w-unlocked.png" filename="wallpaper-unlocked-ryyan.png" mobile />
-          </div>
 
-          <div className="relative">
-            <div className="absolute -top-4 -left-1 z-10 bg-primary-fixed text-surface px-3 py-0.5 font-stamp text-base rotate-[-2deg] sticker-shadow">#VIBE_03</div>
-            <div className="w-full overflow-hidden sticker-shadow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full aspect-[9/16] object-cover" alt="yo. im ryyan." src="/w-yo.png" />
+            {/* Card 2 — unlocked (offset right) */}
+            <div className="relative group translate-x-4">
+              <div className="absolute -top-4 -left-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 -rotate-2 border border-outline-variant/20">#VOID_99</div>
+              <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full aspect-[4/5] object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="Ryyan has unlocked his phone" src="/w-unlocked.png" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute top-1/2 -right-3 font-stamp text-[9px] tracking-widest text-white/30 pointer-events-none" style={{ writingMode: 'vertical-rl' }}>
+                  PROPERTY OF RYYAN SAFAR // 2026
+                </div>
+                <div className="absolute bottom-5 left-5">
+                  <WallpaperActions wallpaperId="w-unlocked" src="/w-unlocked.png" filename="wallpaper-unlocked-ryyan.png" overlay likeRotate="rotate-3" downloadRotate="-rotate-1 hover:rotate-0" />
+                </div>
+              </div>
             </div>
-            <WallpaperActions wallpaperId="w-yo" src="/w-yo.png" filename="wallpaper-yo-ryyan.png" mobile />
-          </div>
 
-          <div className="relative">
-            <div className="absolute -top-4 -left-1 z-10 bg-surface-tint text-surface px-3 py-0.5 font-stamp text-base rotate-[-2deg] sticker-shadow">#MAIN_WP</div>
-            <div className="w-full overflow-hidden sticker-shadow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full aspect-video object-cover" alt="main desktop wallpaper — acid green geometry on obsidian." src="/w-mainwallpaper.svg" />
+            {/* Card 3 — yo (offset left) */}
+            <div className="relative group -translate-x-2">
+              <div className="absolute -top-6 right-10 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 rotate-6 border border-outline-variant/20">#VIBE_03</div>
+              <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full aspect-[4/5] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="yo. im ryyan." src="/w-yo.png" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute bottom-5 right-5">
+                  <WallpaperActions wallpaperId="w-yo" src="/w-yo.png" filename="wallpaper-yo-ryyan.png" overlay likeRotate="-rotate-4" downloadRotate="rotate-2 hover:rotate-0" />
+                </div>
+              </div>
             </div>
-            <WallpaperActions wallpaperId="w-mainwallpaper" src="/w-mainwallpaper.svg" filename="wallpaper-main-ryyan.svg" mobile />
-          </div>
 
-          <div className="relative">
-            <div className="absolute -top-4 -right-1 z-10 bg-primary-fixed text-surface px-3 py-0.5 font-stamp text-base rotate-[2deg] sticker-shadow">#ULTRA_WIDE</div>
-            <div className="w-full overflow-hidden sticker-shadow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full aspect-video object-cover" alt="yes, this is a screensaver." src="/w-screensaver.png" />
+            {/* Card 4 — main desktop wallpaper (widescreen aspect) */}
+            <div className="relative group">
+              <div className="absolute -top-6 -right-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 rotate-2 border border-outline-variant/20">#MAIN_WP</div>
+              <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full aspect-video object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="main desktop wallpaper — acid green geometry on obsidian." src="/w-mainwallpaper.svg" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute bottom-5 left-5 font-stamp text-[10px] tracking-tighter text-white/50 space-y-0.5 pointer-events-none">
+                  <div>RES: 2560×1440</div>
+                  <div>TYPE: DESKTOP_COVER</div>
+                </div>
+                <div className="absolute bottom-5 right-5">
+                  <WallpaperActions wallpaperId="w-mainwallpaper" src="/w-mainwallpaper.svg" filename="wallpaper-main-ryyan.svg" overlay likeRotate="-rotate-1" downloadRotate="rotate-2 hover:rotate-0" />
+                </div>
+              </div>
             </div>
-            <WallpaperActions wallpaperId="w-screensaver" src="/w-screensaver.png" filename="wallpaper-screensaver-ryyan.png" mobile />
-          </div>
-        </section>
 
-        {/* Mobile footer */}
-        <footer className="bg-surface-container-highest px-5 py-16 flex flex-col items-center gap-8 relative overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="" className="w-64 h-64 object-contain" />
+            {/* Card 5 — screensaver (translate right) */}
+            <div className="relative group translate-x-3">
+              <div className="absolute -top-4 -left-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 -rotate-3 border border-outline-variant/20">#ULTRA_WIDE</div>
+              <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full aspect-video object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="yes, this is a screensaver." src="/w-screensaver.png" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute bottom-5 right-5">
+                  <WallpaperActions wallpaperId="w-screensaver" src="/w-screensaver.png" filename="wallpaper-screensaver-ryyan.png" overlay likeRotate="rotate-1" downloadRotate="-rotate-2 hover:rotate-0" />
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </main>
+
+        {/* Footer */}
+        <footer className="px-4 pt-10 pb-28 border-t border-outline-variant/10">
+          <div className="space-y-3">
+            <div className="font-street text-5xl text-on-surface leading-none">NO MORE</div>
+            <div className="font-street text-5xl text-primary-fixed leading-none pl-8">WALLPAPERS</div>
+            <div className="font-street text-5xl text-on-surface leading-none pl-4">TODAY</div>
           </div>
-          <div className="relative z-10 font-street text-[22vw] leading-none text-primary-fixed -rotate-2 text-center">
-            STAY<br />UNHINGED
-          </div>
-          <div className="relative z-10 font-headline font-bold text-xs tracking-[0.4em] text-on-surface opacity-40 uppercase">
-            RYYAN SAFAR © 2026
-          </div>
-          <div className="relative z-10 flex gap-8">
-            <a href="https://ryyansafar.site" className="text-primary-fixed font-headline font-black text-xl hover:line-through transition-all">PORTFOLIO</a>
-            <a href="https://ryyansafar.site/design" className="text-primary-fixed font-headline font-black text-xl hover:line-through transition-all">DESIGN</a>
+          <div className="mt-12 flex justify-between items-end">
+            <div className="font-stamp text-[10px] tracking-[0.3em] text-on-surface/40 uppercase leading-relaxed">
+              DESIGNED IN THE VOID<br />BY RYYAN SAFAR © 2026
+            </div>
+            <div className="font-street text-2xl text-primary-fixed rotate-12">BYE.</div>
           </div>
         </footer>
+
+        {/* Fixed bottom nav */}
+        <nav className="fixed bottom-6 w-full flex justify-center z-50 px-4 pointer-events-none">
+          <div className="flex gap-3 pointer-events-auto">
+            <div className="bg-primary-fixed text-surface p-3 rotate-3 scale-110 shadow-[0_0_20px_rgba(195,244,0,0.3)]">
+              <span className="material-symbols-outlined">grid_view</span>
+            </div>
+            <a href="https://ryyansafar.site" className="bg-surface-container-high text-primary-fixed p-3 -rotate-2 opacity-80 hover:opacity-100 hover:scale-110 transition-all">
+              <span className="material-symbols-outlined">person</span>
+            </a>
+            <a href="https://ryyansafar.site/design" className="bg-surface-container-high text-primary-fixed p-3 rotate-1 opacity-80 hover:opacity-100 hover:scale-110 transition-all">
+              <span className="material-symbols-outlined">brush</span>
+            </a>
+          </div>
+        </nav>
+
       </div>
     </>
   );

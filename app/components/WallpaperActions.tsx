@@ -7,7 +7,8 @@ interface Props {
   src: string;
   filename: string;
   mobile?: boolean;
-  /** Extra Tailwind rotation classes to match surrounding card staggering */
+  /** Compact stacked buttons for overlaying inside a card image */
+  overlay?: boolean;
   likeRotate?: string;
   downloadRotate?: string;
 }
@@ -17,6 +18,7 @@ export default function WallpaperActions({
   src,
   filename,
   mobile = false,
+  overlay = false,
   likeRotate,
   downloadRotate,
 }: Props) {
@@ -31,6 +33,39 @@ export default function WallpaperActions({
     document.body.removeChild(a);
   };
 
+  // Compact overlay variant — used inside mobile image cards
+  if (overlay) {
+    return (
+      <div className="flex flex-col gap-2">
+        <button
+          onClick={toggleLike}
+          disabled={loading}
+          className={`px-5 py-2.5 font-headline font-black text-xs uppercase tracking-tighter sticker-shadow flex items-center gap-1.5 transition-all
+            ${isLiked
+              ? 'bg-surface text-primary-fixed border border-primary-fixed rotate-2'
+              : `bg-primary-fixed text-surface ${likeRotate ?? '-rotate-2'} hover:rotate-0`
+            } ${loading ? 'opacity-60' : ''}`}
+        >
+          <span
+            className="material-symbols-outlined text-sm"
+            style={{ fontVariationSettings: isLiked ? "'FILL' 1" : "'FILL' 0" }}
+          >
+            favorite
+          </span>
+          {isLiked ? 'LIKED' : 'LIKE'}
+          {count > 0 && <span className="opacity-60 font-body font-normal text-[10px]">{count}</span>}
+        </button>
+        <button
+          onClick={handleDownload}
+          className={`bg-primary-fixed text-surface px-5 py-2.5 font-headline font-black text-xs uppercase tracking-tighter sticker-shadow flex items-center gap-1.5 transition-transform ${downloadRotate ?? 'rotate-1 hover:rotate-0'}`}
+        >
+          <span className="material-symbols-outlined text-sm">download</span>GET_FILE
+        </button>
+      </div>
+    );
+  }
+
+  // Mobile variant — side-by-side below image
   if (mobile) {
     return (
       <div className="mt-4 flex gap-3">
@@ -62,6 +97,7 @@ export default function WallpaperActions({
     );
   }
 
+  // Desktop variant — stacked, no absolute positioning (parent handles placement)
   return (
     <div className="flex flex-col gap-4">
       <button
