@@ -1,37 +1,44 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Lenis from 'lenis';
 
 export default function HorizontalScroller({ children }: { children: React.ReactNode }) {
   const scrollRef = useRef<HTMLElement>(null);
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
 
-    // Prevent vertical scrolling on the body globally
+    // Initialize Lenis for smooth horizontal scrolling
+    // 'gestureOrientation: both' handles vertical-to-horizontal mapping natively
+    const lenis = new Lenis({
+      wrapper: el, // Bind to our scroll container
+      content: el, // Content is also the container in this flex layout
+      orientation: 'horizontal',
+      gestureOrientation: 'both',
+      smoothWheel: true,
+      wheelMultiplier: 1.2,
+      touchMultiplier: 1.5,
+      infinite: false,
+    });
+
+    lenisRef.current = lenis;
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Prevent vertical scrolling on the body globally to keep focus on our horizontal track
     document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vh';
 
-    const onWheel = (e: WheelEvent) => {
-      // Catch ALL wheel events on the window to ensure we don't miss any translation
-      // deltaY is for vertical scroll (our trigger), deltaX is for native horizontal
-      if (Math.abs(e.deltaY) > 0 || Math.abs(e.deltaX) > 0) {
-        e.preventDefault();
-        
-        // Combine deltaY and deltaX for a unified horizontal experience
-        // We use a slight multiplier (1.0 - 1.5) if it feels too slow, but raw is usually best for precision
-        el.scrollLeft += (e.deltaY + e.deltaX);
-      }
-    };
-
-    // Use window listener to ensure it's captured everywhere
-    window.addEventListener('wheel', onWheel, { passive: false });
-    
     return () => {
-      window.removeEventListener('wheel', onWheel);
+      lenis.destroy();
       document.body.style.overflow = '';
-      document.body.style.height = '';
     };
   }, []);
 
@@ -39,9 +46,11 @@ export default function HorizontalScroller({ children }: { children: React.React
     <main
       id="h-scroll"
       ref={scrollRef}
-      className="flex h-screen w-screen overflow-x-auto overflow-y-hidden snap-x snap-mandatory no-scrollbar bg-surface select-none"
+      className="flex h-screen w-screen overflow-x-hidden overflow-y-hidden no-scrollbar bg-surface select-none"
     >
-      {children}
+      <div className="flex h-full w-fit">
+        {children}
+      </div>
     </main>
   );
 }
