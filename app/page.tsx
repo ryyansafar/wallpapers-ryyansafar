@@ -252,8 +252,9 @@ export default function Home() {
 
       {/* FLOATING "TORN" BRANDING */}
       <div className="fixed top-8 left-8 z-[100] pointer-events-none">
-        <div className="bg-primary-fixed text-surface px-6 py-2 font-headline font-black text-2xl italic -rotate-3 sticker-shadow">
-          RS_GALLERY
+        <div className="bg-primary-fixed text-surface px-6 py-2 -rotate-3 sticker-shadow">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-header-fr.svg" alt="RS_GALLERY" className="h-8 md:h-12 w-auto" />
         </div>
       </div>
 
