@@ -227,16 +227,14 @@ export default function Home() {
       <div className="md:hidden bg-surface min-h-screen overflow-x-hidden">
 
         {/* Fixed header */}
-        <header className="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_0_40px_rgba(204,255,0,0.06)] flex justify-between items-center px-6 py-4">
-          <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary-fixed">menu</span>
-            <span className="font-headline font-black tracking-tighter uppercase text-primary-fixed text-sm">GALLERY_03</span>
-          </div>
-          <div className="font-street text-2xl text-primary-fixed -rotate-2">RYYAN SAFAR</div>
+        <header className="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_0_40px_rgba(204,255,0,0.06)] flex justify-between items-center px-5 py-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-header-fr.svg" alt="RS" className="h-9 w-auto" />
+          <div className="font-street text-xl text-primary-fixed -rotate-2">RYYAN SAFAR</div>
           <span className="material-symbols-outlined text-primary-fixed">token</span>
         </header>
 
-        <main className="pt-24 pb-36 px-4 space-y-20">
+        <main className="pt-24 pb-36 px-4 space-y-20 overflow-x-clip">
 
           {/* Hero — mixed Barrio + Space Grotesk narrative */}
           <section className="relative min-h-[480px] flex flex-col justify-center items-start overflow-hidden">
@@ -245,7 +243,7 @@ export default function Home() {
             </div>
             <div className="relative z-10 flex flex-col space-y-1 w-full">
               <h2 className="font-street text-5xl text-primary-fixed leading-[0.9] -rotate-2">WALL</h2>
-              <h2 className="font-headline font-black text-7xl text-on-surface leading-[0.85] tracking-tighter translate-x-4 glitch-text">PAPERS</h2>
+              <h2 className="font-headline font-black text-7xl text-on-surface leading-[0.85] tracking-tighter translate-x-3 glitch-text">PAPERS</h2>
               <h2 className="font-street text-4xl text-primary-fixed leading-[0.9] rotate-3 -translate-x-2">YEAH</h2>
               <div className="flex flex-wrap items-baseline gap-2">
                 <h2 className="font-headline font-black text-6xl text-on-surface leading-none uppercase">by</h2>
@@ -253,14 +251,10 @@ export default function Home() {
               </div>
               <h2 className="font-headline font-black text-6xl text-on-surface leading-none underline decoration-primary-fixed decoration-[6px] underline-offset-4 break-words">SAFAR.</h2>
             </div>
-            <div className="mt-8 self-end pr-4 flex flex-col items-center opacity-80">
+            <div className="mt-8 self-end pr-4 flex flex-col items-center gap-1 opacity-90">
               <div className="font-street text-xl text-primary-fixed">RYYAN SAFAR</div>
-              <svg className="mt-[-10px]" width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#c3f400" strokeWidth="4" strokeLinecap="round">
-                <circle cx="50" cy="50" r="40" />
-                <path d="M35 40 Q35 45 35 45" />
-                <path d="M65 40 Q65 45 65 45" />
-                <path d="M30 65 Q50 80 70 65" />
-              </svg>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/Logo-bg.svg" alt="" className="w-16 h-16 object-contain" />
             </div>
           </section>
 
@@ -285,7 +279,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 — unlocked (offset right) */}
-            <div className="relative group translate-x-4">
+            <div className="relative group translate-x-3">
               <div className="absolute -top-4 -left-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 -rotate-2 border border-outline-variant/20">#VOID_99</div>
               <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -301,7 +295,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 — yo (offset left) */}
-            <div className="relative group -translate-x-2">
+            <div className="relative group -translate-x-1">
               <div className="absolute -top-6 right-10 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 rotate-6 border border-outline-variant/20">#VIBE_03</div>
               <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -331,7 +325,7 @@ export default function Home() {
             </div>
 
             {/* Card 5 — screensaver (translate right) */}
-            <div className="relative group translate-x-3">
+            <div className="relative group translate-x-2">
               <div className="absolute -top-4 -left-2 z-20 font-stamp text-xs tracking-widest text-primary-fixed bg-surface px-2 py-1 -rotate-3 border border-outline-variant/20">#ULTRA_WIDE</div>
               <div className="relative overflow-hidden bg-surface-container-low shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
