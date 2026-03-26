@@ -11,11 +11,9 @@ export default function HorizontalScroller({ children }: { children: React.React
     const el = scrollRef.current;
     if (!el) return;
 
-    // Initialize Lenis for smooth horizontal scrolling
-    // 'gestureOrientation: both' handles vertical-to-horizontal mapping natively
     const lenis = new Lenis({
-      wrapper: el, // Bind to our scroll container
-      content: el, // Content is also the container in this flex layout
+      wrapper: el,
+      content: el,
       orientation: 'horizontal',
       gestureOrientation: 'both',
       smoothWheel: true,
@@ -26,6 +24,9 @@ export default function HorizontalScroller({ children }: { children: React.React
 
     lenisRef.current = lenis;
 
+    // Expose lenis to window for external navigation triggers (like HOME button)
+    (window as any).lenisHorizontal = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -33,12 +34,12 @@ export default function HorizontalScroller({ children }: { children: React.React
 
     requestAnimationFrame(raf);
 
-    // Prevent vertical scrolling on the body globally to keep focus on our horizontal track
     document.body.style.overflow = 'hidden';
 
     return () => {
       lenis.destroy();
       document.body.style.overflow = '';
+      delete (window as any).lenisHorizontal;
     };
   }, []);
 

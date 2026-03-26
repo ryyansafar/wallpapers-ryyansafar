@@ -3,6 +3,13 @@
 import HorizontalScroller from './components/HorizontalScroller';
 
 export default function Home() {
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if ((window as any).lenisHorizontal) {
+      (window as any).lenisHorizontal.scrollTo(0, { lerp: 0.1 });
+    }
+  };
+
   return (
     <>
       <HorizontalScroller>
@@ -48,12 +55,9 @@ export default function Home() {
 
         {/* GALLERY TRACK - MOBILE SLABS */}
         <section className="min-w-fit h-full flex-shrink-0 snap-start flex items-center gap-24 px-24 bg-surface-container-low relative overflow-hidden">
-          {/* MASSIVE WATER DROPLET BACKGROUND ICONOGRAPHY */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-fixed opacity-[0.08] pointer-events-none z-0 transform scale-[1.5]">
              <span className="material-symbols-outlined text-[120vh]">water_drop</span>
           </div>
-
-          {/* ADDITIONAL SCATTERED HACKER FLORA */}
           <div className="absolute top-10 right-1/4 opacity-10 -rotate-6 scale-50 pointer-events-none z-0">
              {/* eslint-disable-next-line @next/next/no-img-element */}
              <img src="/hacker-flora.png" alt="" className="w-96" />
@@ -65,12 +69,7 @@ export default function Home() {
               #ACID_01
             </div>
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-                alt="locked"
-                src="/w-locked.svg"
-              />
+              <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="locked" src="/w-locked.svg" />
               <div className="absolute inset-0 holographic-effect opacity-20 pointer-events-none" />
               <div className="absolute bottom-6 left-6 flex flex-col gap-4">
                 <button className="bg-primary-fixed text-surface px-6 py-3 font-headline font-black text-sm uppercase tracking-tighter rotate-2 hover:-rotate-2 transition-transform sticker-shadow flex items-center gap-2">
@@ -91,12 +90,7 @@ export default function Home() {
               #VOID_99
             </div>
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-                alt="unlocked"
-                src="/w-unlocked.svg"
-              />
+              <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="unlocked" src="/w-unlocked.svg" />
               <div className="absolute inset-0 holographic-effect opacity-30 pointer-events-none" />
               <div className="absolute top-6 right-6 font-stamp text-xs text-primary-fixed/40 text-right leading-none">
                 RES: 1242 X 2688<br />
@@ -119,12 +113,7 @@ export default function Home() {
           {/* MOBILE WALLPAPER 3 */}
           <div className="relative z-10 group h-[768px] w-[400px] flex-shrink-0 -mt-16">
             <div className="w-full h-full bg-surface-container-high border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.02]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-                alt="yo"
-                src="/w-yo.svg"
-              />
+              <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="yo" src="/w-yo.svg" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <span className="material-symbols-outlined text-[10rem] text-primary-fixed rotate-12">mood</span>
               </div>
@@ -144,17 +133,13 @@ export default function Home() {
 
         {/* MAIN WALLPAPER SECTION (DESKTOP) */}
         <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface-container-lowest relative overflow-hidden">
-          {/* ANOTHER MASSIVE DROPLET BACKGROUND LAYER */}
           <div className="absolute bottom-0 right-0 text-primary-fixed opacity-5 pointer-events-none transform translate-x-1/4 translate-y-1/4">
              <span className="material-symbols-outlined text-[80rem]">water_drop</span>
           </div>
-
-          {/* SCATTERED FLORA IN MAIN STASH */}
           <div className="absolute bottom-20 left-1/3 opacity-5 rotate-45 scale-75 pointer-events-none">
              {/* eslint-disable-next-line @next/next/no-img-element */}
              <img src="/hacker-flora.png" alt="" className="w-80" />
           </div>
-
           <div className="relative z-10 mb-12">
             <h2 className="font-headline font-black text-8xl text-primary-fixed uppercase tracking-tighter leading-none">
               THE<br />
@@ -167,12 +152,7 @@ export default function Home() {
                 #COLLECTION_00
               </div>
               <div className="w-full h-full bg-surface-container-low border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.01]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-                  alt="the main stash"
-                  src="/w-mainwallpaper.svg"
-                />
+                <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="the main stash" src="/w-mainwallpaper.svg" />
                 <div className="absolute bottom-8 right-8 flex gap-4">
                   <button className="bg-primary-fixed text-surface px-10 py-4 font-headline font-black text-xl uppercase tracking-tighter rotate-1 hover:-rotate-2 transition-transform sticker-shadow flex items-center gap-3">
                     <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
@@ -201,12 +181,10 @@ export default function Home() {
 
         {/* DESKTOP SECTION - SCREENSAVER */}
         <section className="min-w-screen h-full flex-shrink-0 snap-start flex flex-col justify-center px-24 bg-surface relative overflow-hidden">
-          {/* SCATTERED FLORA IN SCREENSAVER SECTION */}
           <div className="absolute top-1/4 left-10 opacity-10 rotate-[-15deg] scale-50 pointer-events-none">
              {/* eslint-disable-next-line @next/next/no-img-element */}
              <img src="/hacker-flora.png" alt="" className="w-72" />
           </div>
-
           <div className="relative z-10 mb-12">
             <h2 className="font-headline font-black text-8xl text-on-surface-variant uppercase tracking-tighter leading-none italic">
               DESKTOP<br />
@@ -219,12 +197,7 @@ export default function Home() {
                 !!!
               </div>
               <div className="w-full h-full bg-surface-container-low border-0 overflow-hidden relative sticker-shadow transform transition-transform group-hover:scale-[1.01]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
-                  alt="screensaver"
-                  src="/w-screensaver.svg"
-                />
+                <img className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" alt="screensaver" src="/w-screensaver.svg" />
                 <div className="absolute bottom-8 right-8 flex gap-4">
                   <button className="bg-primary-fixed text-surface px-10 py-4 font-headline font-black text-xl uppercase tracking-tighter rotate-1 hover:-rotate-2 transition-transform sticker-shadow flex items-center gap-3">
                     <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span>
@@ -269,9 +242,9 @@ export default function Home() {
               RYYAN SAFAR © 2024
             </div>
             <div className="mt-24 flex gap-12">
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site">INDEX</a>
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site">STASH</a>
-              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site/design">SPLATTER</a>
+              <a onClick={handleHomeClick} className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all cursor-pointer" href="#">HOME</a>
+              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site">PORTFOLIO</a>
+              <a className="text-primary-fixed font-headline font-black text-4xl hover:line-through transition-all" href="https://ryyansafar.site/design">DESIGN</a>
             </div>
           </div>
         </section>
@@ -287,24 +260,24 @@ export default function Home() {
       {/* BOTTOM NAV BAR */}
       <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-between items-end px-6 pb-4 md:hidden">
         <div className="bg-[#131313] w-full flex justify-between items-center p-2 rounded-none">
-          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="https://ryyansafar.site">
+          <a onClick={handleHomeClick} className="flex flex-col items-center justify-center text-[#CCFF00] opacity-100 transition-opacity p-3 cursor-pointer" href="#">
             <span className="material-symbols-outlined text-2xl">grid_view</span>
-            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">INDEX</span>
+            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">HOME</span>
           </a>
-          <a className="flex flex-col items-center justify-center bg-[#CCFF00] text-[#131313] -rotate-2 scale-105 p-3" href="https://ryyansafar.site">
+          <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="https://ryyansafar.site">
             <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
-            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">STASH</span>
+            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">PORTFOLIO</span>
           </a>
           <a className="flex flex-col items-center justify-center text-[#CCFF00] opacity-40 hover:opacity-100 transition-opacity p-3" href="https://ryyansafar.site/design">
             <span className="material-symbols-outlined text-2xl">architecture</span>
-            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">SPLATTER</span>
+            <span className="font-headline uppercase tracking-tighter font-bold text-xs mt-1">DESIGN</span>
           </a>
         </div>
       </nav>
 
       {/* SIDE "SCRAPBOOK" INDEX (Desktop Only) */}
       <div className="hidden md:flex fixed top-1/2 -right-8 -translate-y-1/2 flex-col gap-8 z-[100]">
-        <div className="bg-surface-container-high text-primary-fixed p-6 rotate-90 origin-right border-l-4 border-primary-fixed font-headline font-black text-xl tracking-widest cursor-pointer hover:bg-primary-fixed hover:text-surface transition-all">
+        <div onClick={handleHomeClick} className="bg-surface-container-high text-primary-fixed p-6 rotate-90 origin-right border-l-4 border-primary-fixed font-headline font-black text-xl tracking-widest cursor-pointer hover:bg-primary-fixed hover:text-surface transition-all">
           ARCHIVE_03
         </div>
         <div className="bg-surface-container-high text-primary-fixed p-6 rotate-90 origin-right border-l-4 border-primary-fixed font-headline font-black text-xl tracking-widest cursor-pointer hover:bg-primary-fixed hover:text-surface transition-all opacity-40">
