@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Wallpapers — Ryyan Safar",
@@ -35,6 +36,7 @@ export default function RootLayout({
       </head>
       <body className="font-body text-on-surface select-none bg-surface">
         {children}
+        <Analytics />
       </body>
     </html>
   );
